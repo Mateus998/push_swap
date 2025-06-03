@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 11:38:03 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/02 12:25:49 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:06:15 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,23 @@ int	read_instructions(t_list **a, t_list **b)
 		if (!exe_instruc(line, a, b, 0))
 		{
 			free(line);
+			free_get_next_line(STDIN_FILENO);
 			return (0);
 		}
 		free(line);
 		line = get_next_line(STDIN_FILENO);
 	}
 	return (1);
+}
+
+void free_get_next_line(int fd)
+{
+	char *line;
+	
+    line = get_next_line(fd);
+    while (line)
+    {
+        free(line);
+        line = get_next_line(fd);
+    }
 }
