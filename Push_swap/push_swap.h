@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 14:36:36 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/02 15:17:59 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:49:15 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int					rrr(t_list **stack_a, t_list **stack_b);
 char				**ft_split(char const *s, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *str);
-long					ft_atol(const char *str);
+long				ft_atol(const char *str);
 int					vchr(int c);
 int					write_op(int op);
 int					is_sorted(t_list *a, t_list *b);

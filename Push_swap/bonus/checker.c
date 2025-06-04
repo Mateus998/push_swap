@@ -6,12 +6,12 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 11:37:52 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/03 19:08:24 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:40:02 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-//test the gnl free
+
 int	main(int c, char **v)
 {
 	t_list	*stk_a;

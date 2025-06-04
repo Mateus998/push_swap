@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 12:09:32 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/02 12:28:35 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:45:57 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int c, char **v)
 	if (!input_validation(&stack_a, c, v))
 		return (ft_printf("Error\n"), 1);
 	if (is_sorted(stack_a, stack_b))
-		return (0);
+		return (free_list(&stack_a), 0);
 	size = lstsize(stack_a);
 	if (size > 3)
 		turk_sort(&stack_a, &stack_b, size);

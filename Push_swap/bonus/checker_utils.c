@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 11:38:03 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/03 19:06:15 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:50:02 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,14 +90,14 @@ int	read_instructions(t_list **a, t_list **b)
 	return (1);
 }
 
-void free_get_next_line(int fd)
+void	free_get_next_line(int fd)
 {
-	char *line;
-	
-    line = get_next_line(fd);
-    while (line)
-    {
-        free(line);
-        line = get_next_line(fd);
-    }
+	char	*line;
+
+	line = get_next_line(fd);
+	while (line)
+	{
+		free(line);
+		line = get_next_line(fd);
+	}
 }
