@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 11:37:52 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/04 14:28:27 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/04 15:59:36 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	main(int c, char **v)
 	stk_a = NULL;
 	stk_b = NULL;
 	if (!input_validation(&stk_a, c, v))
-		return (free_list(&stk_a), free_list(&stk_b), ft_printf("Error\n"), 1);
+		return (free_list(&stk_a), free_list(&stk_b), write(2, "Error\n", 6), 1);
 	if (!read_instructions(&stk_a, &stk_b))
-		return (ft_printf("Error\n"), 1);
+		return (write(2, "Error\n", 6), 1);
 	if (is_sorted(stk_a, stk_b))
 		ft_printf("OK\nmoves- %i\n", exe_instruc(NULL, &stk_a, &stk_b, 1));
 	else
