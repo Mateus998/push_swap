@@ -6,7 +6,7 @@
 /*   By: mateferr <mateferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 10:38:30 by mateferr          #+#    #+#             */
-/*   Updated: 2025/06/02 11:11:29 by mateferr         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:44:23 by mateferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ra(t_list **stack_a)
 {
 	t_list	*rnode;
 
-	if (!stack_a || (*stack_a)->next == *stack_a)
+	if (!stack_a || !*stack_a || (*stack_a)->next == *stack_a)
 		return (0);
 	rnode = *stack_a;
 	remove_node(stack_a, rnode);
@@ -28,7 +28,7 @@ int	rb(t_list **stack_b)
 {
 	t_list	*rnode;
 
-	if (!stack_b || (*stack_b)->next == *stack_b)
+	if (!stack_b || !*stack_b || (*stack_b)->next == *stack_b)
 		return (0);
 	rnode = *stack_b;
 	remove_node(stack_b, rnode);
@@ -45,7 +45,7 @@ int	rra(t_list **stack_a)
 {
 	t_list	*node;
 
-	if (!stack_a || (*stack_a)->next == *stack_a)
+	if (!stack_a || !*stack_a || (*stack_a)->next == *stack_a)
 		return (0);
 	node = lastnode(*stack_a);
 	remove_node(stack_a, node);
@@ -57,7 +57,7 @@ int	rrb(t_list **stack_b)
 {
 	t_list	*node;
 
-	if (!stack_b || (*stack_b)->next == *stack_b)
+	if (!stack_b || !*stack_b || (*stack_b)->next == *stack_b)
 		return (0);
 	node = lastnode(*stack_b);
 	remove_node(stack_b, node);
