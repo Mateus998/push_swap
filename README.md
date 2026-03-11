@@ -17,6 +17,7 @@ You have 11 specific instructions at your disposal to manipulate the stacks:
 ### Compilation
 The project includes a **Makefile** that compiles the source files using `cc` with the flags `-Wall -Wextra -Werror`. Use the following rules:
 *   `make`: Compiles the `push_swap` program.
+*   `make bonus`: Compiles the `checker` program.
 *   `make clean`: Removes object files.
 *   `make fclean`: Removes object files and the binary.
 *   `make re`: Recompiles the entire project.
@@ -26,9 +27,13 @@ To run the program, provide a list of integers as arguments:
 ```bash
 ./push_swap 2 1 3 6 5 8
 ```
-The program will output the sequence of instructions to sort the stack. You can also verify the output using the **checker** (if compiled) or the provided `checker_OS`:
+The program will output the sequence of instructions to sort the stack. You can also verify the output using the **checker** (if compiled):
 ```bash
-ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+```
+Program test script:
+```bash
+./test_script.sh
 ```
 
 ## 📊 Benchmarks
